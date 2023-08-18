@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notepad</title>
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xl: { max: "1200px" },
+            lg: { max: "992px" },
+            md: { max: "768px" },
+            sm: { max: "576px" },
+          },
+          extend: {},
+        },
+      };
+    </script>
+  </head>
+  <body class="md:bg-[#00000033]">
+    <div class="mx-auto my-24 px-4 py-8 max-w-2xl bg-[#00000033] md:bg-transparent md:my-0">
+      <div class="my-2 mx-auto w-[87%]">
+        <h1 class="text-3xl text-center text-gray-700 mb-6 sm:text-2xl">Notepad</h1>
+        <!-- input section -->
+        <div class="input-box bg-white mb-3 h-8 flex justify-between items-center">
+          <input type="text" placeholder="Enter your new note" maxlength="19" class="input-text basis-[87%] border-none outline-none pl-2 bg-transparent h-full placeholder:text-gray-600">
+          <i class="fa-solid fa-plus basis-[13%] h-full w-full flex justify-center items-center bg-gray-500 text-white text-xl hover:text-black"></i>
+        </div>
+        <!-- color section -->
+        <div id="color-box" class="mb-8">
+          <div class="color w-5 h-5 rounded-full inline-block sm:w-4 sm:h-4" style="background-color: #ECEFF1;"></div>
+          <div class="color w-5 h-5 rounded-full inline-block sm:w-4 sm:h-4" style="background-color: #9575CD;"></div>
+          <div class="color w-5 h-5 rounded-full inline-block sm:w-4 sm:h-4" style="background-color: #BA68C8;"></div>
+          <div class="color w-5 h-5 rounded-full inline-block sm:w-4 sm:h-4" style="background-color: #29B6F6;"></div>
+          <div class="color w-5 h-5 rounded-full inline-block sm:w-4 sm:h-4" style="background-color: #4DB6AC;"></div>
+          <div class="color w-5 h-5 rounded-full inline-block sm:w-4 sm:h-4" style="background-color: #FFEE58;"></div>
+          <div class="color w-5 h-5 rounded-full inline-block sm:w-4 sm:h-4" style="background-color: #FFA726;"></div>
+          <div class="color w-5 h-5 rounded-full inline-block sm:w-4 sm:h-4" style="background-color: #E57373;"></div>
+        </div>
+        <!-- tip section -->
+        <small class="tip hidden text-gray-700"><span class="text-red-500">*</span>Click on the note to delete</small>
+        <!-- note section -->
+        <div class="note-box mt-2 grid auto-rows-min grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1">
+          <p class="note-text h-min m-0 p-3 text-center bg-[#ECEFF1] hover:bg-gray-400 first:hidden"></p>
+        </div>
+      </div>
+    </div>
+    <!-- js link -->
+    <script src="js/styles.js"></script>
+  </body>
+</html>
